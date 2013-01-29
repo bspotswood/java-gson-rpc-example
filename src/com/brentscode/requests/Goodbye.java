@@ -9,7 +9,6 @@ public class Goodbye extends RequestMessage {
     
     @Override
     public void process() {
-        System.exit(0);
     }
 
 }

@@ -72,6 +72,15 @@ var JavaRpcClient = function() {
                            + "java.exe to your environment variables or specify "
                            + "the full path to it in the javaPath variable.");
             }
+            
+            // 1 likely means that the JAR cannot be found
+            if(1 == code) { 
+                console.log( "Java was executed, but it seems like the .jar file "
+                           + "cannot be found. You might need to build the java "
+                           + "program if you have only checked out the source; "
+                           + "otherwise, you may need to check the path to the "
+                           + "jar in the node script.")
+            }
         });
 
         // Emit our own event to indicate to others that we have spawned
